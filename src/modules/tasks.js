@@ -1,4 +1,4 @@
-import { taskList } from './data';
+import { taskList } from './data.js';
 
 class Task {
   constructor(string, bool, number) {
