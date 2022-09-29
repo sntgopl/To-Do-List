@@ -13,6 +13,9 @@ class Task {
   }
 
   remove() {
+    for (let i = this.number; i < taskList.length; i += 1) {
+      taskList[i].number -= 1;
+    }
     taskList.splice(this, 1);
     refreshList();
   }
