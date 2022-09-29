@@ -1,11 +1,17 @@
 import './style.css';
-import refreshList from './modules/functionality.js';
+import refreshList from './modules/refresh.js';
+import checkTask from './modules/check.js';
 import {
+  clearAll,
+  description,
   taskName,
 } from './modules/selectors.js';
 import Task from './modules/tasks.js';
+import { taskList, updateLocalStorage } from './modules/data.js';
+import editText from './modules/edit.js';
 
 refreshList();
+console.log(taskList);
 
 taskName.addEventListener('keypress', (e) => {
   if (taskName.value === '') {
@@ -13,7 +19,7 @@ taskName.addEventListener('keypress', (e) => {
   }
   if (e.key === 'Enter') {
     e.preventDefault();
-    const t = new Task(taskName.value, false, undefined);
+    const t = new Task(taskName.value, false);
     t.addTask();
     refreshList();
     taskName.value = '';
@@ -21,10 +27,24 @@ taskName.addEventListener('keypress', (e) => {
   return true;
 });
 
-function component() {
-  const element = document.createElement('div');
+const complete = document.querySelectorAll('.complete');
 
-  return element;
-}
+complete.forEach((input, index) => {
+  input.addEventListener('change', () => {
+    checkTask(index);
+  });
+});
 
-document.body.appendChild(component());
+clearAll.addEventListener('click', () => {
+  Task.removeTask();
+});
+
+description.forEach((element, index) => {
+  element.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      editText(index);
+      updateLocalStorage(taskList);
+      document.location.reload();
+    }
+  });
+});

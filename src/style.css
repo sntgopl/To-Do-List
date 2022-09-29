@@ -59,9 +59,23 @@ body {
   border-bottom: 1px solid rgb(205, 205, 205);
 }
 
-#description {
+.description {
   width: 60vw;
   color: black;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.edit {
+  z-index: 3;
+  height: 30px;
+  width: 10px;
+  color: black;
+  border: 1px solid black;
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 #clearAll {
