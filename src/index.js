@@ -25,8 +25,12 @@ taskName.addEventListener('keypress', (e) => {
 const edit = document.querySelectorAll('.edit');
 edit.forEach((input, number) => {
   input.addEventListener('click', () => {
+    for (let i = number; i < taskList.length; i += 1) {
+      taskList[i].number -= 1;
+    }
     taskList.splice(number, 1);
     updateLocalStorage(taskList);
+    refreshList();
     document.location.reload();
   });
 });
