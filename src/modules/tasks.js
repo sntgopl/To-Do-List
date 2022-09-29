@@ -12,6 +12,11 @@ class Task {
     taskList.push(this);
   }
 
+  remove() {
+    taskList.splice(this, 1);
+    refreshList();
+  }
+
   static removeTask() {
     for (let i = 0; i <= taskList.length - 1; i += 1) {
       if (taskList[i].bool === true) {
