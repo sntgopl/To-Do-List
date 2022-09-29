@@ -14,13 +14,7 @@ Webpack,
 ## Getting Started
 
 Welcome to To-do-list! We introduce new search methodology applied with javascript and dynamic html. New work dynamic creating and merging secondary branches for a single pull request.
-To get a local copy up and running follow these simple example steps.
-1- Download the zip file or clone it via git
-2- Navigate to the location of the folder in your machine:
-**`you@your-Pc-name:~$ cd <folder>`**
-3- after you get the project to your local machine open the index.html file or simply run the live server
-4- install the node packages via npm install
-4- to Check for linters run (npx hint .) for html code fixed and npx stylelint "\*_/_.{css,scss}"
+To get a local copy up and running please download the zip file or clone it via git
 
 ### Clone and review it
 
@@ -65,7 +59,6 @@ Please rate this project.
 Microverse Community
 GitHub Repositories
 Minimalist To do list
-Inspiration
 
 ## 📝 License
 
