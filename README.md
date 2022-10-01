@@ -11,6 +11,9 @@ CSS,
 Javascript,
 Webpack,
 
+## GitHub Pages 
+- https://sntgopl.github.io/To-Do-List/dist/
+
 ## Getting Started
 
 Welcome to To-do-list! We introduce new search methodology applied with javascript and dynamic html. New work dynamic creating and merging secondary branches for a single pull request.
