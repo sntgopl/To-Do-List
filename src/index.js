@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import _ from 'lodash';
 import './style.css';
 import refreshList from './modules/refresh.js';
 import checkTask from './modules/check.js';
