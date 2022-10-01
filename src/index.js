@@ -10,6 +10,7 @@ import { taskList, updateLocalStorage } from './modules/data.js';
 import createTask from './modules/create.js';
 
 refreshList();
+console.log(taskList);
 
 taskName.addEventListener('keypress', (e) => {
   if (taskName.value === '') {
@@ -24,6 +25,12 @@ taskName.addEventListener('keypress', (e) => {
 const edit = document.querySelectorAll('.edit');
 edit.forEach((input, number) => {
   input.addEventListener('click', () => {
+<<<<<<< HEAD
+=======
+    for (let i = number; i < taskList.length; i += 1) {
+      taskList[i].number -= 1;
+    }
+>>>>>>> 55e8fab7fc294dae54068eee28f2ba217c642935
     taskList.splice(number, 1);
     updateLocalStorage(taskList);
     refreshList();
